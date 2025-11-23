@@ -11,7 +11,7 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(cuid())
+  id        String   @id @default(uuid())
   email     String   @unique
   name      String?
   password  String
@@ -21,7 +21,7 @@ model User {
 }
 
 model Event {
-  id          String   @id @default(cuid())
+  id          String   @id @default(uuid())
   title       String
   startTime   String
   endTime     String
